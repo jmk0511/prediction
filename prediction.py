@@ -37,7 +37,7 @@ def divide_Age(age):
         return 1
     else:
         return 2
-age=age.apply(divide_Age)
+
 
 def divide_RestingBP(resting_bp):
     if resting_bp<90:
@@ -46,7 +46,7 @@ def divide_RestingBP(resting_bp):
         return 2
     else:
         return 1
-resting_bp=resting_bp.apply(divide_RestingBP)
+
 
 #小于110，返回0，大于230，返回2，中间为1
 def divide_Cholesterol(cholesterol):
@@ -56,7 +56,7 @@ def divide_Cholesterol(cholesterol):
         return 2
     else:
         return 1
-cholesterol=cholesterol.apply(divide_Cholesterol)
+
 
 #小于110，返回0，大于180，返回2，中间为1
 def divide_MaxHR(max_hr):
@@ -66,7 +66,7 @@ def divide_MaxHR(max_hr):
         return 2
     else:
         return 1
-max_hr=max_hr.apply(divide_MaxHR)
+
 
 #1及以下为0，1到2之间为1，2到3之间为2,其他为3
 def divide_Oldpeak(old_peak):
@@ -77,8 +77,14 @@ def divide_Oldpeak(old_peak):
     elif old_peak>2 and old_peak<=3:
         return 2
     else: return 3
-old_peak=old_peak.apply(divide_Oldpeak)
 
+
+
+age = divide_Age(age)
+resting_bp = divide_RestingBP(resting_bp)
+cholesterol = divide_Cholesterol(cholesterol)
+max_hr = divide_MaxHR(max_hr)
+old_peak = divide_Oldpeak(old_peak)
 
 
 
