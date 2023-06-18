@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 
 # 加载已训练好的模型
-with open('decision_tree_model.pkl', 'rb') as file:
+with open('prediction.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # 创建用户输入表单
