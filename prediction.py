@@ -95,15 +95,15 @@ prediction = model.predict(features)[0]
 prediction_proba = model.predict_proba(features)[0]
 
 # 显示预测结果
-st.subheader('Prediction')
+st.subheader('Prediction 预测结果')
 if prediction == 0:
-    st.write('Congratulations! You are not at risk of heart disease.')
+    st.write('Congratulations! You are not at risk of heart disease.恭喜！您没有心脏病的风险。')
 else:
-    st.write('You are at risk of heart disease. Please consult a doctor.')
+    st.write('You are at risk of heart disease. Please consult a doctor.您有患心脏病的风险，请咨询医生。')
 
-st.subheader('Prediction Probability')
-st.write(f"Not at risk: {prediction_proba[0] * 100:.2f}%")
-st.write(f"At risk: {prediction_proba[1] * 100:.2f}%")
+st.subheader('Prediction Probability 预测概率')
+st.write(f"Not at risk 无风险: {prediction_proba[0] * 100:.2f}%")
+st.write(f"At risk 有风险: {prediction_proba[1] * 100:.2f}%")
 
 
 
