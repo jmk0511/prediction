@@ -28,7 +28,7 @@ resting_ecg = resting_ecg_mapping[resting_ecg]
 exercise_angina = 1 if exercise_angina == 'Yes（是）' else 0
 st_slope_mapping = {'Upsloping（向上倾斜）': 1, 'Flat（平）': 0, 'Downsloping（向下倾斜）': 2}
 st_slope = st_slope_mapping[st_slope]
-fasting_bs = 1 if fasting_bs == 'Greater than 120mg/dl' else 0
+fasting_bs = 1 if fasting_bs == 'Greater than 120mg/dl（高于 120mg/dl）' else 0
 
 def divide_Age(age):
     if age<=35:
@@ -104,15 +104,3 @@ else:
 st.subheader('Prediction Probability 预测概率')
 st.write(f"Not at risk 无风险: {prediction_proba[0] * 100:.2f}%")
 st.write(f"At risk 有风险: {prediction_proba[1] * 100:.2f}%")
-
-
-
-
-
-
-
-
-
-
-
-
